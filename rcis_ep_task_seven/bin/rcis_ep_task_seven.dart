@@ -11,31 +11,36 @@ void main() {
   print('3 - Завершение работы');
   stdout.write('Введите номер: ');
   menu = int.parse(stdin.readLineSync()!);
-  if(menu == 1) {
-    print('Редактор задач:');
-    print('1 - добавить задачу');
-    print('2 - удалить задачу');
-    print('3 - редактировать задачу');
-    print('4 - Завершение работы');
-    stdout.write('Введите номер: ');
-    tasks = int.parse(stdin.readLineSync()!);
-    if(tasks == 1) {
-      print('Добавить задачу: ');
-    }
-    else if(tasks == 2) {
-      print('Удалить задачу: ');
-    }
-    else if(tasks == 3) {
-      print('Редактировать задачу: ');
-    }
-    else if(tasks == 4) {
+
+  switch (menu) {
+    case 1:
+      print('Редактор задач:');
+      print('1 - добавить задачу');
+      print('2 - удалить задачу');
+      print('3 - редактировать задачу');
+      print('4 - Завершение работы');
+      stdout.write('Введите номер: ');
+      tasks = int.parse(stdin.readLineSync()!);
+      break;
+    case 2:
+      print('Просмотр задач');
+      break;
+    case 3:  
       return;
-    }
+    default:
   }
-  else if(menu == 2) {
-    print('Просмотр задач: ');
-  }
-  else if(menu == 3) {
-    return;
+  switch (tasks) {
+    case 1:
+      print('Добавить задачу: ');
+      break;
+    case 2:
+      print('Удалить задачу: ');
+      break;
+    case 3:
+      print('Редактировать здачу: ');
+      break;
+    case 4:
+      break;
+    default:
   }
 }
