@@ -206,7 +206,7 @@ void task5() {
   int res = 0;
   int countNum = 0;
   if (indexMin < indexMax) {
-    for (int i = indexMin + 1; i < indexMax; i++) {
+    for (int i = indexMin; i < indexMax; i++) {
       res += digits[i];
       countNum++;
     }
@@ -218,5 +218,5 @@ void task5() {
     }
   }
   print("Ваш текстовый докумет: $digits");
-  print('Среднее арифметическое чисел между ${digits[indexMin]} и ${digits[indexMax]} = ${res / countNum}');
+  print('Среднее арифметическое чисел между ${digits[indexMin + 2]} и ${digits[indexMax]} = ${res / countNum}');
 }
